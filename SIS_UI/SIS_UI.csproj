@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SIS_MODEL\SIS_MODEL.csproj" />
+    <ProjectReference Include="..\SIS_DATA\SIS_DATA.csproj" />
+  </ItemGroup>
+</Project>
