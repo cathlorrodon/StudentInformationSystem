@@ -49,7 +49,7 @@ namespace SIS_DATA
                 fullname = "Happy P. Enciso",
                 Gender = "Female",
                 DateofBirth = new DateTime(2003, 1, 8),
-                placeofBirth = "Pangasinan",
+                placeofBirth = "Binan",
                 mobileNo = 0969000000,
                 emailAddress = "xxxxx@gmail.com",
                 residentialAddress = "Binan Laguna",

@@ -21,9 +21,10 @@ namespace SIS_RULES
                 status = StudentForm.studentWelcomePage();
                 switch (status)
                 {
-                    case 0: break;
+                    case 0://exit Log out break;
                     case 1: //student information
                         PrintInfos.PrintStudentInfo(StudentForm.username);
+                        actionStudentWelcomePage();
                         break;
 
                     case 2: //personal information
@@ -33,6 +34,7 @@ namespace SIS_RULES
                             case 0: break;
                             case 1:
                                 PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
+                                actionStudentWelcomePage();
                                 break;
                             case 2:
                                 //doUpdate();
@@ -61,13 +63,29 @@ namespace SIS_RULES
                                     case 9: doUpdatePermanentAddress(); break;
 
                                 }
-
+                                actionStudentWelcomePage();
                                 break;
                         }
+
                         break;
 
-                    case 3: StudentForm.gradingSystem(); break;
-                    case 4: StudentForm.attendance(); break;
+                    case 3: 
+                        StudentForm.gradingSystem();
+                        actionStudentWelcomePage();
+                        break;
+
+                    case 4: 
+                        StudentForm.attendance();
+                        actionStudentWelcomePage(); 
+                        break;
+
+                    case 5:
+                        //Schedule
+                        break;
+
+                    case 6:
+                        //Subject
+                        break;
                 }
             } while (status == null);
         }
@@ -171,7 +189,11 @@ namespace SIS_RULES
         }
 
 
+        //methods for schedule
 
+
+        
+        //methods for subject
 
 
 
