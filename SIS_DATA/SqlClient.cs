@@ -12,6 +12,12 @@ namespace SIS_DATA
     {
         static string connectionString = "Data Source =localhost; Initial Catalog = SQLsis; Integrated Security = true;";
         //static SqlConnection sqlConnection;
-        
+        //static SqlConnection sqlConnection;
+
+        //public SqlClient()
+        //{
+        //    sqlConnection = new SqlConnection(connectionString);
+        //}
+
     }
 }

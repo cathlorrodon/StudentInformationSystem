@@ -51,6 +51,25 @@ namespace SIS_UI
 
         }
 
+        public static void PrintFacultyInfo(string facultyNumber)
+        {
+            InMemoryFacultyInfo facultyInfo = new InMemoryFacultyInfo();
+            FacultyInfo faculty = facultyInfo.GetFacultyInfoByFacultyNumber(facultyNumber);
+
+            if (faculty != null)
+            {
+                Console.WriteLine("\nFaculty Information:\n");
+                Console.WriteLine($"Faculty Number: {faculty.facultyNumber}");
+                Console.WriteLine($"Faculty Name: {faculty.facultyName}");
+                Console.WriteLine($"Subject Held: {faculty.subjectHeld}");
+                Console.WriteLine($"Email Address: {faculty.email}");
+            }
+            else
+            {
+                Console.WriteLine("Faculty Not Found");
+            }
+        }
+
 
 
     }

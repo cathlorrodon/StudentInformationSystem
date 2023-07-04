@@ -21,7 +21,9 @@ namespace SIS_RULES
                 status = StudentForm.studentWelcomePage();
                 switch (status)
                 {
-                    case 0://exit Log out break;
+                    case 0:
+                        FacultyForm.logOut();
+                        break;
                     case 1: //student information
                         PrintInfos.PrintStudentInfo(StudentForm.username);
                         actionStudentWelcomePage();

@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace SIS_MODEL
 {
-    internal class FacultyInfo
+    public class FacultyInfo
     {
         public string facultyNumber { get; set; }
         public string facultyName { get; set; }
         public string subjectHeld { get; set; }
-
         public string email { get; set; }
     }
 }
