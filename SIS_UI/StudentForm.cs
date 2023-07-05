@@ -83,10 +83,10 @@ namespace SIS_UI
             return Console.ReadLine();
         }
 
-        public static long updateContactNumber()
+        public static string updateContactNumber()
         {
             Console.WriteLine("Enter new Contact Number: ");
-            return Convert.ToInt64(Console.ReadLine());
+            return Console.ReadLine();
         }
 
         //method to call success update

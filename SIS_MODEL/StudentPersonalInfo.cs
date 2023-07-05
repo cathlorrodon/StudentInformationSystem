@@ -9,7 +9,7 @@ namespace SIS_MODEL
         public String Gender { get; set; }
         public DateTime DateofBirth { get; set; }
         public String placeofBirth { get; set; }
-        public long mobileNo { get; set; }
+        public string mobileNo { get; set; }
         public String emailAddress { get; set; }
         public String residentialAddress { get; set; }
         public String permanentAdress { get; set; }

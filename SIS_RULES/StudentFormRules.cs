@@ -35,7 +35,10 @@ namespace SIS_RULES
                         {
                             case 0: break;
                             case 1:
-                                PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
+                                //PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
+                                //SqlClient.showStudentPersonalInfo();
+                                SqlClient sql = new SqlClient();
+                                sql.showStudentPersonalInfo();
                                 actionStudentWelcomePage();
                                 break;
                             case 2:
@@ -119,7 +122,7 @@ namespace SIS_RULES
             InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
             StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
 
-            long mobileNumber = StudentForm.updateContactNumber();
+            string mobileNumber = StudentForm.updateContactNumber();
 
             studentinfo.mobileNo = mobileNumber;
 
