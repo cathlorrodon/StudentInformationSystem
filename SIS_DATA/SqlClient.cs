@@ -21,9 +21,10 @@ namespace SIS_DATA
             sqlConnection = new SqlConnection(connectionString);
         }
 
-
+        //instantiating classes
         StudentPersonalInfo student = new StudentPersonalInfo();
         StudentInfo studentInfo = new StudentInfo();
+        FacultyInfo facultyInfo = new FacultyInfo();
 
         //method for viewing student personal information
         public void showStudentPersonalInfo(string sisAccountNumber)
@@ -101,6 +102,31 @@ namespace SIS_DATA
                     $"Course: {studentInfo.course}\n" +
                     $"Year: {studentInfo.year}\n" +
                     $"Section: {studentInfo.section}\n");
+            }
+            sqlConnection.Close();
+        }
+
+        //method to view faculty info
+        public void showFacultyInfo(string facultyNumber)
+        {
+            string sqlQuery = "SELECT * FROM FacultyInfo where FacultyNumber = @FacultyNumber";
+            SqlCommand command = new SqlCommand(sqlQuery, sqlConnection);
+            sqlConnection.Open();
+            command.Parameters.AddWithValue("@FacultyNumber", facultyNumber);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                facultyInfo.facultyNumber = reader.GetString(1);
+                facultyInfo.facultyName = reader.GetString(2);
+                facultyInfo.subjectHeld = reader.GetString(3);
+                facultyInfo.email = reader.GetString(4);
+
+                Console.WriteLine($"\nFaculty Number: {facultyInfo.facultyNumber}\n" +
+                    $"Faculty Name: {facultyInfo.facultyName}\n" +
+                    $"Subject Held: {facultyInfo.subjectHeld}\n" +
+                    $"Email Address: {facultyInfo.email}\n"); 
+
             }
             sqlConnection.Close();
         }
