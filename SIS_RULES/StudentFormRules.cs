@@ -13,6 +13,7 @@ namespace SIS_RULES
 
         public static void actionStudentWelcomePage()
         {
+            SqlClient sql = new SqlClient();
 
             int status;
             int action;
@@ -25,7 +26,8 @@ namespace SIS_RULES
                         FacultyForm.logOut();
                         break;
                     case 1: //student information
-                        PrintInfos.PrintStudentInfo(StudentForm.username);
+                        //PrintInfos.PrintStudentInfo(StudentForm.username);
+                        sql.showStudentInfo(StudentForm.username);
                         actionStudentWelcomePage();
                         break;
 
@@ -37,8 +39,9 @@ namespace SIS_RULES
                             case 1:
                                 //PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
                                 //SqlClient.showStudentPersonalInfo();
-                                SqlClient sql = new SqlClient();
-                                sql.showStudentPersonalInfo();
+                                //SqlClient sql = new SqlClient();
+                                sql.showStudentPersonalInfo(StudentForm.username);
+                                //PrintInfos.SqlPrintStudentPersonalInfo();
                                 actionStudentWelcomePage();
                                 break;
                             case 2:

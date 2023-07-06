@@ -70,6 +70,24 @@ namespace SIS_UI
             }
         }
 
+        //SQL Printing Information
+        public static void SqlPrintStudentPersonalInfo(StudentPersonalInfo student)
+        {
+            //InMemoryStudentInfo student = new InMemoryStudentInfo();
+            
+
+            //StudentPersonalInfo student = new StudentPersonalInfo();    
+            Console.WriteLine("\nStudent Personal Information\n");
+            Console.WriteLine($"SIS Account Number: {student.SISAccountNumber}");
+            Console.WriteLine($"Full Name: {student.fullname}");
+            Console.WriteLine($"Gender: {student.Gender}");
+            Console.WriteLine($"Date Of Birth: {student.DateofBirth}");
+            Console.WriteLine($"Place Of Birth: {student.placeofBirth}");
+            Console.WriteLine($"Mobile Number: {student.mobileNo}");
+            Console.WriteLine($"Email Address: {student.emailAddress}");
+            Console.WriteLine($"Residential Address: {student.residentialAddress}");
+            Console.WriteLine($"Permanent Address: {student.permanentAdress}");
+        }
 
 
     }
