@@ -36,7 +36,7 @@ namespace SIS_UI
         public static int actionUpdateStudentPersonalInfo()
         {
             Console.WriteLine("\nCurrent personal information\n");
-            PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
+            //PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
 
             Console.WriteLine("\nEDIT PERSONAL INFORMATION\n");
             Console.WriteLine("Please choose an action: ");
@@ -61,7 +61,7 @@ namespace SIS_UI
         }
         public static string updatePlaceOfBirth()
         {
-            Console.WriteLine("Enter new Place Of Birth: ");
+            Console.WriteLine("\nEnter new Place Of Birth: ");
             return Console.ReadLine();
         }
 
@@ -95,7 +95,7 @@ namespace SIS_UI
             Console.WriteLine("\nStudent personal information updated successfully.");
             Console.WriteLine("Here's the updated personal information\n");
 
-            PrintInfos.PrintStudentPersonalInfo(username);
+            //PrintInfos.PrintStudentPersonalInfo(username);
         }
 
         public static void nonEditable()

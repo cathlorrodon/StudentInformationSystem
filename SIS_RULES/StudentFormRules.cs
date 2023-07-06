@@ -60,7 +60,10 @@ namespace SIS_RULES
                                     //Date Of Birth
                                     case 4: StudentForm.nonEditable(); break;
                                     //Place Of Birth
-                                    case 5: doUpdatePOB(); break;
+                                    case 5:
+                                        //doUpdatePOB(); 
+                                        sql.updatePlaceOfBirth(StudentForm.username);
+                                        break;
                                     //Mobile Number
                                     case 6: doUpdateMobile(); break;
                                     //Email Address
@@ -102,7 +105,7 @@ namespace SIS_RULES
         //Update Place of Birth
         public static void updatePlaceOfBirth(string sisAccountNumber)
         {
-            InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
+            //InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
             StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
 
             string placeOfBirth = StudentForm.updatePlaceOfBirth();
@@ -122,7 +125,7 @@ namespace SIS_RULES
         //Update MObile Number
         public static void updateMobileNumber(string sisAccountNumber)
         {
-            InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
+            //InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
             StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
 
             string mobileNumber = StudentForm.updateContactNumber();
@@ -141,7 +144,7 @@ namespace SIS_RULES
         //Update Email Address
         public static void updateEmailAdd(string sisAccountNumber)
         {
-            InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
+            //InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
             StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
 
             string emailAddress = StudentForm.updateEmailAddress();
@@ -161,7 +164,7 @@ namespace SIS_RULES
         //Update Residential Address
         public static void updateResidentialAdd(string sisAccountNumber)
         {
-            InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
+            //InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
             StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
 
             string residentialAddress = StudentForm.updateResidentialAdd();
@@ -180,7 +183,7 @@ namespace SIS_RULES
         //Update Permanent Address
         public static void updatePermanentAdd(string sisAccountNumber)
         {
-            InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
+            //InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
             StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
 
             string permanentAddress = StudentForm.updatePermanentAdd();

@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Net.NetworkInformation;
 using SIS_MODEL;
 using System.Diagnostics;
+using SIS_UI;
 
 namespace SIS_DATA
 {
@@ -51,15 +52,16 @@ namespace SIS_DATA
                 student.permanentAdress = reader.GetString(9);
 
                 //SIS_UI
-                Console.WriteLine($"\nSIS Account Number: {student.SISAccountNumber}\n" +
-                    $"Full Name: {student.fullname}\n" +
-                    $"Gender: {student.Gender}\n" +
-                    $"Date Of Birth: {student.DateofBirth}\n" +
-                    $"Place Of Birth: {student.placeofBirth}\n" +
-                    $"Mobile Number: {student.mobileNo}\n" +
-                    $"Email Address: {student.emailAddress}\n" +
-                    $"Residential Address: {student.residentialAddress}\n" +
-                    $"Permanent Address: {student.permanentAdress}");
+                ShowInformation.ShowStudentPersonalInfo(student);
+                //Console.WriteLine($"\nSIS Account Number: {student.SISAccountNumber}\n" +
+                //    $"Full Name: {student.fullname}\n" +
+                //    $"Gender: {student.Gender}\n" +
+                //    $"Date Of Birth: {student.DateofBirth}\n" +
+                //    $"Place Of Birth: {student.placeofBirth}\n" +
+                //    $"Mobile Number: {student.mobileNo}\n" +
+                //    $"Email Address: {student.emailAddress}\n" +
+                //    $"Residential Address: {student.residentialAddress}\n" +
+                //    $"Permanent Address: {student.permanentAdress}");
                 
                 /*string formattedInfo = $"\nStudent Personal Information\n" +
                     $"SIS Account Number: {student.SISAccountNumber}\n" +
@@ -97,11 +99,13 @@ namespace SIS_DATA
                 studentInfo.year = reader.GetInt32(4);
                 studentInfo.section = reader.GetInt32(5);
 
-                Console.WriteLine($"\nSIS Account Number: {studentInfo.SISAccountNumber}\n" +
-                    $"Full Name: {studentInfo.fullName}\n" +
-                    $"Course: {studentInfo.course}\n" +
-                    $"Year: {studentInfo.year}\n" +
-                    $"Section: {studentInfo.section}\n");
+                //SIS_UI
+                ShowInformation.ShowStudentInfo(studentInfo);
+                //Console.WriteLine($"\nSIS Account Number: {studentInfo.SISAccountNumber}\n" +
+                //    $"Full Name: {studentInfo.fullName}\n" +
+                //    $"Course: {studentInfo.course}\n" +
+                //    $"Year: {studentInfo.year}\n" +
+                //    $"Section: {studentInfo.section}\n");
             }
             sqlConnection.Close();
         }
@@ -122,10 +126,12 @@ namespace SIS_DATA
                 facultyInfo.subjectHeld = reader.GetString(3);
                 facultyInfo.email = reader.GetString(4);
 
-                Console.WriteLine($"\nFaculty Number: {facultyInfo.facultyNumber}\n" +
-                    $"Faculty Name: {facultyInfo.facultyName}\n" +
-                    $"Subject Held: {facultyInfo.subjectHeld}\n" +
-                    $"Email Address: {facultyInfo.email}\n"); 
+                //SIS_UI
+                ShowInformation.showFacultyInfo(facultyInfo);
+                //Console.WriteLine($"\nFaculty Number: {facultyInfo.facultyNumber}\n" +
+                //    $"Faculty Name: {facultyInfo.facultyName}\n" +
+                //    $"Subject Held: {facultyInfo.subjectHeld}\n" +
+                //    $"Email Address: {facultyInfo.email}\n"); 
 
             }
             sqlConnection.Close();
@@ -134,10 +140,24 @@ namespace SIS_DATA
         //method for updating personal information
         public void updatePlaceOfBirth(string sisAccountNumber)
         {
-            string sqlQuery = "UPDATE StudentPersonalInfo Set PlaceOfBirth = @PlaceOfBirth";
-            SqlCommand command = new SqlCommand(sqlQuery, sqlConnection);
             sqlConnection.Open();
 
+            string placeOfBirth = StudentForm.updatePlaceOfBirth();
+
+            string sqlQuery = "UPDATE StudentPersonalInfo Set PlaceOfBirth = @PlaceOfBirth where SISAccountNumber = @SISAccountNumber";
+            SqlCommand command = new SqlCommand(sqlQuery, sqlConnection);
+            //sqlConnection.Open();
+            command.Parameters.AddWithValue("@PlaceOfBirth", placeOfBirth);
+            command.Parameters.AddWithValue("@SISAccountNumber", sisAccountNumber);
+            command.ExecuteNonQuery();
+
+            //Console.WriteLine("\nPersonal information updated successfully!");
+            String message = "Place of birth updated successfully";
+            Debug.Print(message);
+
+            sqlConnection.Close();
+
+            
 
         }
     }

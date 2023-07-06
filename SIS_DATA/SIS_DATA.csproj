@@ -12,5 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SIS_MODEL\SIS_MODEL.csproj" />
+    <ProjectReference Include="..\SIS_UI\SIS_UI.csproj" />
   </ItemGroup>
 </Project>

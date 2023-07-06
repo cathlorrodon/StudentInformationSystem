@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SIS_DATA\SIS_DATA.csproj" />
     <ProjectReference Include="..\SIS_MODEL\SIS_MODEL.csproj" />
     <ProjectReference Include="..\SIS_UI\SIS_UI.csproj" />
     <ProjectReference Include="..\AM_Rules\AM_Rules.csproj" />
