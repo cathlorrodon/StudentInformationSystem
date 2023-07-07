@@ -94,6 +94,18 @@ namespace SIS_RULES
 
                     case 5:
                         //Schedule
+                        action = StudentForm.scheduleSystem();
+                        switch (action)
+                        {
+                            case 0: actionStudentWelcomePage(); break;
+                            case 1: StudentForm.scheduleMonday(); break;
+                            case 2: StudentForm.scheduleTuesday(); break;
+                            case 3: StudentForm.scheduleWednesday(); break;
+                            case 4: StudentForm.scheduleThursday(); break;
+                            case 5: StudentForm.scheduleFriday(); break;
+                            case 6: StudentForm.scheduleSaturday(); break;
+                        }
+                        actionStudentWelcomePage();
                         break;
 
                     case 6:
