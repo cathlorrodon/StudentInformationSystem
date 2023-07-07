@@ -68,8 +68,8 @@ namespace SIS_UI
 
             // Ask the user if they want to see other semesters
 
-	public static int SeeOtherSem()
-{
+	    public static void SeeOtherSem()
+        {
             Console.WriteLine("\nDo you want to see the other semesters? (Y/N)");
             string input = Console.ReadLine();
             if (input.ToUpper() == "Y")
@@ -83,7 +83,7 @@ namespace SIS_UI
                 int semesterChoice = Convert.ToInt32(Console.ReadLine());
 
                 switch (semesterChoice)
-               		 {
+               	{
                     case 1:
                         ViewFirstYearFirstSemester();
                         break;
@@ -99,9 +99,8 @@ namespace SIS_UI
                     default:
                         Console.WriteLine("Invalid semester choice.");
                         break;
-                	}
-   	   	 }
-	     }
+			    }
+		    }
         }
-    }
+   	}
 }
