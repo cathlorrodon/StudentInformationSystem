@@ -65,7 +65,9 @@ namespace SIS_RULES
                                         sql.updatePlaceOfBirth(StudentForm.username);
                                         break;
                                     //Mobile Number
-                                    case 6: doUpdateMobile(); break;
+                                    case 6:
+                                        doUpdateMobile(); 
+                                        break;
                                     //Email Address
                                     case 7: doUpdateEmailAddress(); break;
                                     //Residential Add

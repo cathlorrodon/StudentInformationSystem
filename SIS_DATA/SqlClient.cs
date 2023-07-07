@@ -15,6 +15,7 @@ namespace SIS_DATA
     {
         private string connectionString
         = "Data Source=LAPTOP-EKPAGTRE\\SQLEXPRESS;Initial Catalog=PUPStudentInformationSytem;Integrated Security=True;";
+        //= "Server=tcp://,1433;Database=PUPPoints;User Id=sa;Password=indaleenq727!;";
         private SqlConnection sqlConnection;
 
         public SqlClient()
@@ -156,9 +157,8 @@ namespace SIS_DATA
             Debug.Print(message);
 
             sqlConnection.Close();
-
-            
-
         }
+
+
     }
 }
