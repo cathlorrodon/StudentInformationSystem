@@ -9,6 +9,5 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SIS_MODEL\SIS_MODEL.csproj" />
-    <ProjectReference Include="..\SIS_DATA\SIS_DATA.csproj" />
   </ItemGroup>
 </Project>

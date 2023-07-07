@@ -10,6 +10,8 @@ namespace SIS_RULES
     {
         public static void actionFacultyWelcomePage()
         {
+            SqlClient sql = new SqlClient();
+
             int status;
             do
             {
@@ -21,7 +23,8 @@ namespace SIS_RULES
                         break;
 
                     case 1: //Faculty Information
-                        PrintInfos.PrintFacultyInfo(StudentForm.username);
+                        //PrintInfos.PrintFacultyInfo(StudentForm.username);
+                        sql.showFacultyInfo(StudentForm.username);
                         actionFacultyWelcomePage();
                         break;
 

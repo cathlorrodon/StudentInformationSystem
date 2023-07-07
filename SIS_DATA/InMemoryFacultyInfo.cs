@@ -31,57 +31,57 @@ namespace SIS_DATA
             FacultyInfo faculty1 = new FacultyInfo
             {
                 facultyNumber = "FA0001BN2016",
-                facultyName = "",
-                subjectHeld = "",
-                email = ""
+                facultyName = "Indaleen Quinsayas",
+                subjectHeld = "Integrative Programming and Technologies 1",
+                email = "indaleenquinsayas@pup.com"
             };
 
             FacultyInfo faculty2 = new FacultyInfo
             {
-                facultyNumber = "FA0001BN2016",
-                facultyName = "",
-                subjectHeld = "",
-                email = ""
+                facultyNumber = "FA0002BN2016",
+                facultyName = "Ramon Almazan ",
+                subjectHeld = "Human Computer Interaction",
+                email = "ramonalmazan@pup.com"
             };
 
             FacultyInfo faculty3 = new FacultyInfo
             {
-                facultyNumber = "FA0001BN2016",
-                facultyName = "",
-                subjectHeld = "",
-                email = ""
+                facultyNumber = "FA0003BN2016",
+                facultyName = "Glorina Orozco",
+                subjectHeld = "People and Earth's Ecosystem",
+                email = "glorinaorozco@pup.com"
             };
 
             FacultyInfo faculty4 = new FacultyInfo
             {
-                facultyNumber = "FA0001BN2016",
-                facultyName = "",
-                subjectHeld = "",
-                email = ""
+                facultyNumber = "FA0004BN2016",
+                facultyName = "Julian Lorico",
+                subjectHeld = "Quantitative Methods with Modeling and Simulation ",
+                email = "julianlorico@pup.com"
             };
 
             FacultyInfo faculty5 = new FacultyInfo
             {
-                facultyNumber = "FA0001BN2016",
-                facultyName = "",
-                subjectHeld = "",
-                email = ""
+                facultyNumber = "FA0005BN2016",
+                facultyName = "Ivan Macha",
+                subjectHeld = "Information Management",
+                email = "ivanmacha@pup.com"
             };
 
             FacultyInfo faculty6 = new FacultyInfo
             {
-                facultyNumber = "FA0001BN2016",
-                facultyName = "",
-                subjectHeld = "",
-                email = ""
+                facultyNumber = "FA0006BN2016",
+                facultyName = "Edmundo Dela Cruz",
+                subjectHeld = "Object Oriented Programming",
+                email = "edmundodelacruz@pup.com"
             };
 
             FacultyInfo faculty7 = new FacultyInfo
             {
-                facultyNumber = "FA0001BN2016",
-                facultyName = "",
-                subjectHeld = "",
-                email = ""
+                facultyNumber = "FA0007BN2016",
+                facultyName = "Noemi Apostol",
+                subjectHeld = "Team Sports",
+                email = "noemiapostol@pup.com"
             };
 
             FacultyInfos.Add(faculty1);
