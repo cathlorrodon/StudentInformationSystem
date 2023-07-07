@@ -15,6 +15,8 @@ namespace SIS_UI
             Console.WriteLine("[2]Personal Information");
             Console.WriteLine("[3]Grading System");
             Console.WriteLine("[4]Attendance");
+            Console.WriteLine("[5]Schedule");
+            Console.WriteLine("[6]Subject");
             Console.Write("Input: ");
             return Convert.ToInt32(Console.ReadLine());
         }
@@ -34,7 +36,7 @@ namespace SIS_UI
         public static int actionUpdateStudentPersonalInfo()
         {
             Console.WriteLine("\nCurrent personal information\n");
-            PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
+            //PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
 
             Console.WriteLine("\nEDIT PERSONAL INFORMATION\n");
             Console.WriteLine("Please choose an action: ");
@@ -59,7 +61,7 @@ namespace SIS_UI
         }
         public static string updatePlaceOfBirth()
         {
-            Console.WriteLine("Enter new Place Of Birth: ");
+            Console.WriteLine("\nEnter new Place Of Birth: ");
             return Console.ReadLine();
         }
 
@@ -81,10 +83,10 @@ namespace SIS_UI
             return Console.ReadLine();
         }
 
-        public static long updateContactNumber()
+        public static string updateContactNumber()
         {
             Console.WriteLine("Enter new Contact Number: ");
-            return Convert.ToInt64(Console.ReadLine());
+            return Console.ReadLine();
         }
 
         //method to call success update
@@ -93,7 +95,7 @@ namespace SIS_UI
             Console.WriteLine("\nStudent personal information updated successfully.");
             Console.WriteLine("Here's the updated personal information\n");
 
-            PrintInfos.PrintStudentPersonalInfo(username);
+            //PrintInfos.PrintStudentPersonalInfo(username);
         }
 
         public static void nonEditable()

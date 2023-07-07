@@ -73,7 +73,7 @@ namespace AM_Data
             SISAccount faculty1 = new SISAccount
             {
                 SISAccountNumber = "FA0001BN2016",
-                EmailAddress = "indaleenquinsayas@gmail.com",
+                EmailAddress = "indaleenquinsayas@pup.com",
                 Password = "facultypass",
                 Type = SISType.Faculty,
                 DateCreated = DateTime.Now,
@@ -83,7 +83,7 @@ namespace AM_Data
             SISAccount faculty2 = new SISAccount
             {
                 SISAccountNumber = "FA0002BN2016",
-                EmailAddress = "ramonalmazan@gmail.com",
+                EmailAddress = "ramonalmazan@pupcom",
                 Password = "facultypass",
                 Type = SISType.Faculty,
                 DateCreated = DateTime.Now,
@@ -93,7 +93,7 @@ namespace AM_Data
             SISAccount faculty3 = new SISAccount
             {
                 SISAccountNumber = "FA0003BN2016",
-                EmailAddress = "glorinaorozco@gmail.com",
+                EmailAddress = "glorinaorozco@pup.com",
                 Password = "facultypass",
                 Type = SISType.Faculty,
                 DateCreated = DateTime.Now,
@@ -103,7 +103,7 @@ namespace AM_Data
             SISAccount faculty4 = new SISAccount
             {
                 SISAccountNumber = "FA0004BN2016",
-                EmailAddress = "julianlorico@gmail.com",
+                EmailAddress = "julianlorico@pup.com",
                 Password = "facultypass",
                 Type = SISType.Faculty,
                 DateCreated = DateTime.Now,
@@ -113,7 +113,7 @@ namespace AM_Data
             SISAccount faculty5 = new SISAccount
             {
                 SISAccountNumber = "FA0005BN2016",
-                EmailAddress = "ivanmacha@gmail.com",
+                EmailAddress = "ivanmacha@pup.com",
                 Password = "facultypass",
                 Type = SISType.Faculty,
                 DateCreated = DateTime.Now,
@@ -123,7 +123,7 @@ namespace AM_Data
             SISAccount faculty6 = new SISAccount
             {
                 SISAccountNumber = "FA0006BN2016",
-                EmailAddress = "eddelacruz@gmail.com",
+                EmailAddress = "edmundodelacruz@pup.com",
                 Password = "facultypass",
                 Type = SISType.Faculty,
                 DateCreated = DateTime.Now,
@@ -133,7 +133,7 @@ namespace AM_Data
             SISAccount faculty7 = new SISAccount
             {
                 SISAccountNumber = "FA0006BN2016",
-                EmailAddress = "noyapostol@gmail.com",
+                EmailAddress = "noemiapostol@pup.com",
                 Password = "facultypass",
                 Type = SISType.Faculty,
                 DateCreated = DateTime.Now,

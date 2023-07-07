@@ -37,7 +37,7 @@ namespace SIS_DATA
                 Gender = "Male",
                 DateofBirth = new DateTime(2002, 5, 9),
                 placeofBirth = "Pangasinan",
-                mobileNo = 09080000000,
+                mobileNo = "09080000000",
                 emailAddress = "xxxxx@gmail.com",
                 residentialAddress = "Binan Laguna",
                 permanentAdress = "San Pedro Laguna"
@@ -49,8 +49,8 @@ namespace SIS_DATA
                 fullname = "Happy P. Enciso",
                 Gender = "Female",
                 DateofBirth = new DateTime(2003, 1, 8),
-                placeofBirth = "Pangasinan",
-                mobileNo = 0969000000,
+                placeofBirth = "Binan",
+                mobileNo = "0969000000",
                 emailAddress = "xxxxx@gmail.com",
                 residentialAddress = "Binan Laguna",
                 permanentAdress = "San Pedro Laguna"
