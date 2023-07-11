@@ -66,14 +66,24 @@ namespace SIS_RULES
                                         break;
                                     //Mobile Number
                                     case 6:
-                                        doUpdateMobile(); 
+                                        //doUpdateMobile(); 
+                                        sql.updateMobileNumber(StudentForm.username);
                                         break;
                                     //Email Address
-                                    case 7: doUpdateEmailAddress(); break;
+                                    case 7: 
+                                        //doUpdateEmailAddress(); 
+                                        sql.updateEmailAddress(StudentForm.username);
+                                        break;
                                     //Residential Add
-                                    case 8: doUpdateResidentialAddress(); break;
+                                    case 8:
+                                        //doUpdateResidentialAddress(); 
+                                        sql.updateResidentialAddress(StudentForm.username);
+                                        break;
                                     //Permanent Add
-                                    case 9: doUpdatePermanentAddress(); break;
+                                    case 9:
+                                        //doUpdatePermanentAddress(); 
+                                        sql.updatePermanentAddress(StudentForm.username);
+                                        break;
 
                                 }
                                 actionStudentWelcomePage();
@@ -94,6 +104,18 @@ namespace SIS_RULES
 
                     case 5:
                         //Schedule
+                        action = StudentForm.scheduleSystem();
+                        switch (action)
+                        {
+                            case 0: actionStudentWelcomePage(); break;
+                            case 1: StudentForm.scheduleMonday(); break;
+                            case 2: StudentForm.scheduleTuesday(); break;
+                            case 3: StudentForm.scheduleWednesday(); break;
+                            case 4: StudentForm.scheduleThursday(); break;
+                            case 5: StudentForm.scheduleFriday(); break;
+                            case 6: StudentForm.scheduleSaturday(); break;
+                        }
+                        actionStudentWelcomePage();
                         break;
 
                     case 6:
