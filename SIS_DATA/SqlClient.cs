@@ -8,6 +8,7 @@ using System.Net.NetworkInformation;
 using SIS_MODEL;
 using System.Diagnostics;
 using SIS_UI;
+using System.Net.Mail;
 
 namespace SIS_DATA
 {
@@ -15,6 +16,7 @@ namespace SIS_DATA
     {
         private string connectionString
         = "Data Source=LAPTOP-EKPAGTRE\\SQLEXPRESS;Initial Catalog=PUPStudentInformationSytem;Integrated Security=True;";
+        //= "Server=tcp://,1433;Database=PUPPoints;User Id=sa;Password=indaleenq727!;";
         private SqlConnection sqlConnection;
 
         public SqlClient()
@@ -156,9 +158,91 @@ namespace SIS_DATA
             Debug.Print(message);
 
             sqlConnection.Close();
-
-            
-
         }
+
+        //method for updating 
+        public void updateMobileNumber(string sisAccountNumber)
+        {
+            sqlConnection.Open();
+
+            string mobileNumber = StudentForm.updateContactNumber();
+
+            string sqlQuery = "UPDATE StudentPersonalInfo Set MobileNo = @MobileNo where SISAccountNumber = @SISAccountNumber";
+            SqlCommand command = new SqlCommand(sqlQuery, sqlConnection);
+            //sqlConnection.Open();
+            command.Parameters.AddWithValue("@MobileNo", mobileNumber);
+            command.Parameters.AddWithValue("@SISAccountNumber", sisAccountNumber);
+            command.ExecuteNonQuery();
+
+            //Console.WriteLine("\nPersonal information updated successfully!");
+            String message = "Mobile Number updated successfully";
+            Debug.Print(message);
+
+            sqlConnection.Close();
+        }
+
+        //updating email address
+        public void updateEmailAddress(string sisAccountNumber)
+        {
+            sqlConnection.Open();
+
+            string emailAddress = StudentForm.updateEmailAddress();
+
+            string sqlQuery = "UPDATE StudentPersonalInfo Set EmailAddress = @EmailAddress where SISAccountNumber = @SISAccountNumber";
+            SqlCommand command = new SqlCommand(sqlQuery, sqlConnection);
+            //sqlConnection.Open();
+            command.Parameters.AddWithValue("@EmailAddress", emailAddress);
+            command.Parameters.AddWithValue("@SISAccountNumber", sisAccountNumber);
+            command.ExecuteNonQuery();
+
+            //Console.WriteLine("\nPersonal information updated successfully!");
+            String message = "Email Address updated successfully";
+            Debug.Print(message);
+
+            sqlConnection.Close();
+        }
+
+        //updating residential address
+        public void updateResidentialAddress(string sisAccountNumber)
+        {
+            sqlConnection.Open();
+
+            string resAddress = StudentForm.updateResidentialAdd();
+
+            string sqlQuery = "UPDATE StudentPersonalInfo Set ResidentialAddress = @ResidentialAddress where SISAccountNumber = @SISAccountNumber";
+            SqlCommand command = new SqlCommand(sqlQuery, sqlConnection);
+            //sqlConnection.Open();
+            command.Parameters.AddWithValue("@ResidentialAddress", resAddress);
+            command.Parameters.AddWithValue("@SISAccountNumber", sisAccountNumber);
+            command.ExecuteNonQuery();
+
+            //Console.WriteLine("\nPersonal information updated successfully!");
+            String message = "Residential Address updated successfully";
+            Debug.Print(message);
+
+            sqlConnection.Close();
+        }
+
+        //updating permanent address
+        public void updatePermanentAddress(string sisAccountNumber)
+        {
+            sqlConnection.Open();
+
+            string permAddress = StudentForm.updatePermanentAdd();
+
+            string sqlQuery = "UPDATE StudentPersonalInfo Set PermanentAddress = @PermanentAddress where SISAccountNumber = @SISAccountNumber";
+            SqlCommand command = new SqlCommand(sqlQuery, sqlConnection);
+            //sqlConnection.Open();
+            command.Parameters.AddWithValue("@PermanentAddress", permAddress);
+            command.Parameters.AddWithValue("@SISAccountNumber", sisAccountNumber);
+            command.ExecuteNonQuery();
+
+            //Console.WriteLine("\nPersonal information updated successfully!");
+            String message = "Permanent Address updated successfully";
+            Debug.Print(message);
+
+            sqlConnection.Close();
+        }
+
     }
 }
