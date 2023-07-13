@@ -37,8 +37,9 @@ namespace SIS_RULES
                         actionFacultyWelcomePage();
                         break;
 
-                    case 4://Schedule
-
+                    case 4://Schedule System
+                        FacultyForm.scheduleSystem();
+                        actionFacultyWelcomePage();
                         break;
                 }
             } while (status == null);
